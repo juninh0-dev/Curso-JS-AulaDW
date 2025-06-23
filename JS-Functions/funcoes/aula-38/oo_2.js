@@ -8,10 +8,21 @@ class Produto{
     get nome(){
         return `Produto: ${this._nome}`
     }
+
     set nome(novoNome){
         this._nome = novoNome.toUpperCase()
     }
-    
+
+    get preco(){
+        return this._nome
+    }
+
+    set preco(novoPreco){
+        if(novoPreco >= 0){
+            this._preco = novoPreco
+        }
+    }
+
     get /*--> serve para chamar como atributo e não como função*/precoFinal(){
         return this.preco * (1 - this.desc)
     }
